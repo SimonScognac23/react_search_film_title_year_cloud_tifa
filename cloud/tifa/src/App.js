@@ -2,10 +2,12 @@
 import './App.css';
 import {useState, useEffect} from 'react';
 import MovieList from './components/MovieList'
+import Navbar from './components/Navbar';
 
 
 
-const APIKEY =  '';
+
+const APIKEY =  'c44b12b1';
 const APIURL = 'https://www.omdbapi.com';
 
 
@@ -57,13 +59,15 @@ useEffect( () => {  // in qsta funzione facciamo la chiamata all API
 //   chiamo movies che ritornera un array e react lo converitra automaticmanete in elementi 
 // l attributo key serve se react cambia e fa il refresh sa quale elemento è cambiato 
   return (
+    <>
+    <Navbar></Navbar>
    <div className="App">
 
      <h1> my movies </h1>
    <MovieList movies={movies} />
 </div>
 
-    
+    </>
     
 
 
