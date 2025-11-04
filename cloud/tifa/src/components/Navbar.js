@@ -1,12 +1,8 @@
 import React, { useState } from 'react';
-// Navbar.js
 import { Menu } from './Menu';
-
-// Navbar.js
 import { SearchBar } from './SearchBar';
 
-
-export const Navbar = () => {
+const Navbar = (params) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -25,7 +21,7 @@ export const Navbar = () => {
 
         {/* Menu e SearchBar */}
         <Menu menuOpen={menuOpen} />
-        <SearchBar />
+        <SearchBar {...params} />
       </nav>
     </header>
   );

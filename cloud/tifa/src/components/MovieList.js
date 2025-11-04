@@ -1,4 +1,4 @@
-import MovieItem from './Movieitem';
+import MovieItem from './MovieItem';
 
 
 
